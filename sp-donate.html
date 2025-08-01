@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Mission & Donate | Women in STEAM | ES</title>
+  <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20230103/ourmid/pngtree-a-girl-logo-hair-png-image_6550514.png"> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">STEAM Dashboard | ES</div>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="sp-index.html">Pagina Principal</a></li>
+      <li><a href="sp-graphs.html" >Visualizaciones de Datos</a></li>
+      <li><a href="sp-donate.html" class="active">Nuestra Misión y Donaciones </a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Our Mission</h1>
+    </section>
+    <div class="card-row">
+    <!-- CARD 1 -->
+    <section class="card">
+      <h2>Why Women in STEM?</h2>
+      <p>STEM (science, technology, engineering, and math) fields are shaping the future. While there are barriers, there are ways to remedy them. With a focus on inclusivity, providing spaces for everyone’s voices to be heard, and amplifying diversity, women can find their place in STEM. Everyone deserves a seat at the table—especially women.</p>
+    </section>
+<!-- CARD 2 -->
+    <section class="card">
+      <h2>What’s the Problem?</h2>
+      <p>There is a significant lack of access to education for women around the globe, which has led to the gender gap in STEM fields. The conversation surrounding technology is constantly changing, and it is seen as the thing that will change our future as we know it. With something that holds increasing importance in our society, why shouldn’t women have a say in it? </p>
+    </section>
+<!-- CARD 3 -->
+    <section class="card">
+      <h2>By the Numbers</h2>
+      <ul> 
+        <li>Women made up only <strong>28.2%</strong> of the global STEM workforce in 2024. (<a href="https://swe.org/research/2025/global-stem-workplace/" target="_blank" rel="noopener noreferrer">SWE</a>)</li>
+        <li>Only <strong>35%</strong> of STEM graduates over the past 10 years were women. (<a href="https://www.unesco.org/en/gender-equality/education/stem" target="_blank" rel="noopener noreferrer">UNESCO</a>)</li>
+      </ul>
+      <p>Other barriers include stereotypes, unconscious bias, lack of role models, and work-life balance struggles. (<a href="https://professionalprograms.mit.edu/blog/leadership/the-gender-gap-in-stem/" target="_blank" rel="noopener noreferrer">MIT</a>)</p>
+    </section>
+    </div>
+    
+
+
+    <section class="card">
+      
+       <div class="card-content">
+         <div class="card-text">
+      <h2>Why Do We Care?</h2>
+      <p>When tasked with creating data visualizations on a topic we are passionate about, we all knew we wanted to focus on women. As Kode with Klossy scholars, an organization dedicated to introducing young women and gender non conforming teenagers to the world of code, this topic was very close to us.</p>
+         </div>
+       <div class="card-image">
+      <img src="https://learntocodewith.me/wp-content/uploads/2022/12/Women-coding-1024x684.jpg" 
+        width:60px;
+        height:auto;/>
+       </div>
+       </div>
+    </section>
+ 
+
+    <section class="card">
+      <h2>Why Should You Care?</h2>
+      <p>Not only is this something that affects us, it’s something that affects you too! With an increase in diversity, there’s also an increase in different perspectives which can provide important tools, new ways of understanding problems, and the skills to solve particular challenges. Ensuring women’s voices are heard in STEM helps us all move forward.</p>
+    </section>
+
+    <section class="card">
+      <h2>Cracking the Code: Quality Education for All</h2>
+      <p>Watch how girls are breaking barriers in STEM education around the world:</p>
+      <div class="video-container">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/3v59jGWK7NQ?si=NiIudVQOqjcKbNW1" title="Girls Who Code - UNESCO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Donate: Support the Coding Cause!</h2>
+      <p>Join us in helping to close the gender gap in STEM by supporting education, inclusivity, and opportunity.</p> 
+
+      <div class="donation-buttons">
+        <a class="donate-button" href="https://malala.org" target="_blank" rel="noopener noreferrer">Malala Girls' Education</a>
+        <a class="donate-button" href="https://www.unicef.org/education/girls-education" target="_blank" rel="noopener noreferrer">UNICEF Girls Education</a>
+        <a class="donate-button" href="https://www.globalfundforwomen.org" target="_blank" rel="noopener noreferrer">Women and Girls Fund</a>
+      </div>
+    </section>
+
+    <!-- <a class="donate-button" href="#">Donate Now</a> -->
+  </main>
+
+
+  <!-- Hidden Google Translate Element -->
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- Custom Language Switcher -->
+  <select id="languageSwitcher" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="es" selected>Español</option>
+  </select>
+
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    });
+
+    function changeLanguage() {
+      const lang = document.getElementById("languageSwitcher").value;
+      if (lang === "es") {
+        window.location.href = "sp-donate.html";
+      } else {
+        window.location.href = "donate.html";
+      }
+    }
+  </script>
+
+</body>
+</html>
