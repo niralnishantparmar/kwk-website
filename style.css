@@ -1,0 +1,617 @@
+/* Reset & base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef6f9, #ffa7c4, #ff69b4); /* gradient background */
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+}
+
+
+/* navbar */
+.navbar {
+  background: #D64592;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #FFF0F5;
+  border-bottom: 2px solid white;
+}
+
+/* Mobile Nav (hey you never know) */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Hero Section! ( edit pls_*/
+.hero {
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent white */
+  backdrop-filter: blur(6px); /* glassmorphism effect */
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #fefefe;
+}
+
+
+/* Cards be so fr*/
+.card {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.card h2 {
+  color: #D64592;
+}
+
+/* Placeholders */
+.placeholder {
+  background: #F7F7F7;
+  color: #999;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.donate-button,
+button[type="submit"] {
+  background-color: #D64592;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.donate-button:hover,
+button[type="submit"]:hover {
+  background-color: #C83783;
+  
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #FFF;
+}
+
+/* Responsive navbar!! */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #D64592;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* additional stylung for header elements frfr */
+.hero {
+  background: linear-gradient(120deg, #ff69b4, #ffa7c4, #fef6f9); /* pink gradient */
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 4px solid #fff;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  text-shadow: 2px 2px 6px rgba(255, 105, 180, 0.6);
+}
+
+
+/* spacing fixes */
+
+.container {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+/* Ensure cards have spacing between each other */
+.card + .card {
+  margin-top: 2rem;
+}
+
+/* Add bottom margin to hero section so it doesn't overlap content below */
+.hero {
+  margin-bottom: 3rem !important;
+}
+
+/* Optional: add spacing to main content sections if you wrap them in <section> tags */
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+
+/*
+things we have to do, in no particular order: 
+1. make donate button work
+2. make contact form work
+3. side to side about us pics (make new css class probably)
+4. images on homepage (slideshow?)
+5. images throughout the actual website
+6. write more content to make it look like we did more work than we actually did
+7. duplicate the entire website like twice and make it spanish (and arabic but right to left)
+8. win !!!
+
+
+*/
+
+
+/* side by side donate buttons */
+.donation-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.donate-button {
+  background-color: #e63946;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #d62828;
+}
+
+
+/* side by side donate text bubbles */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-row .card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/*fix height descripancies */
+.card-row .card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+/* Remove space-between (caused the awkward gaps) */
+.card-row .card > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+}
+@media (max-width: 768px) {
+  .card-row {
+    flex-direction: column;
+  }
+}
+
+
+
+
+.card h2 {
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  margin-top: 0;
+}
+.card {
+  min-height: 100%;
+} */
+
+.card h2 {
+  margin-top: 0; /* prevent unnecessary top spacing */
+}
+
+.card p,
+.card ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  color: #D64592;
+}
+
+.card p,
+.card ul {
+  margin: 0;
+}
+/*
+.card-row .card {
+  height: 100%;
+  min-height: 250px;
+*/
+}
+
+.card-row .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ← this centers content vertically */
+  align-items: flex-start;  /* ← keeps text aligned to the left */
+  padding: 2rem;
+  flex: 1;
+  min-width: 250px;
+  box-sizing: border-box;
+}
+
+section.hero {
+  padding: 2rem 0;
+}
+
+section.card {
+  margin-bottom: 2rem;
+}
+.card:first-of-type {
+  padding-top: 2.5rem;
+}
+
+
+/* Reset heading and paragraph spacing inside .card */
+.card h2,
+.card p,
+.card ul {
+  margin: 0;
+}
+
+/* Give consistent padding inside each card */
+.card {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background-color: white; /* or whatever you're using */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional for elevation */
+}
+
+/* Fix weird spacing caused by .hero */
+.hero {
+  padding: 2rem 0;
+  margin-bottom: 0;
+}
+
+/* Reset browser default heading margin globally */
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+/* Reset paragraph/ul margin globally too !!! */
+p, ul {
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+/*navbar spaicng */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 1rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+.mySlides img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4;}
+  to {opacity: 1;}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 0.5rem 1rem;
+  margin-top: -22px;
+  color: #D64592;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.3s ease;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #D64592;
+  color: white;
+}
+
+
+
+/* Team cards container */
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual team member card */
+.team-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex: 1 1 calc(25% - 1.5rem); /* 4 per row with gap */
+  min-width: 220px;
+  max-width: 280px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Team card image */
+.team-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Name and text */
+.team-card h3 {
+  font-size: 1.2rem;
+  color: #D64592;
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Social links */
+.team-card a {
+  display: inline-block;
+  text-decoration: none;
+  color: #D64592;
+  font-weight: 600;
+  border: 1px solid #D64592;
+  border-radius: 5px;
+  padding: 0.4rem 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.team-card a:hover {
+  background-color: #D64592;
+  color: white;
+}
+
+/*Images from Our mission*/
+
+
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; /* mobile-friendly */
+}
+
+.card-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.card-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.card-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  
+}
+
+
+.card-image_2 img {
+    width: 140px;
+    height: auto;
+    border-radius: 0.5rem;
+    
+}
+.card-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* R*/
+
+
+/*translate*/
+/* Hide Google Translate banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+} 
+body {
+  top: 0px !important;
+}
+
+/* Hide Google Translate dropdown */
+#google_translate_element {
+  display: none !important;
+}
+
+
